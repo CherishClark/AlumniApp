@@ -1,7 +1,6 @@
 <%= form_for @comment, url: '#' do |f| %>
   <div class="form-group">
-    <%= f.text_area :content, id: :comment_content, class: 'form-control', rows: 7, placeholder: 'Your Comment
-```language
+    <%= f.text_area :content, id: :comment_content, class: 'form-control', rows: 7, placeholder: '```language
     Your Code Here
 ``` 
 (Feel free to use markdown for code snippets.  Default language set to Ruby)' %>
