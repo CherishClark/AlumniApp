@@ -204,8 +204,19 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  coffee-unknown
+  font-unknown
+  jquery-unknown
   ruby
+  sass-unknown
+  selenium-unknown
+  spring-unknown
+  sprockets-unknown
+  tzinfo-unknown
+  unknown
+  web-unknown
 
+DEPENDENCIES
   acts_as_votable (~> 0.11.1)
   bootstrap (~> 4.0)
   bourbon (~> 4.3, >= 4.3.4)
@@ -232,3 +243,5 @@ PLATFORMS
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
 
+BUNDLED WITH
+   1.16.0
