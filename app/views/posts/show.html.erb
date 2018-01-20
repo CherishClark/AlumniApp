@@ -1,24 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="card">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Ranking:</strong>
-  <%= @post.ranking %>
-</p>
+    <p>
+      <h4>Ranking: <%= @post.ranking %></h4>
+    </p>
 
-<p>
-  <strong>Topic:</strong>
-  <%= @post.topic %>
-</p>
+    <h4>Topic:</h4>
+    <p>
+      <%= @post.topic %>
+    </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @post.comment %>
-</p>
+    <h4>Post:</h4>
+    <p>
+      <%= markdown @post.body %>
+    </p>
 
-<p>
-  <strong>Images:</strong>
-  <%= @post.images %>
-</p>
+    <p>
+      <%= @post.images %>
+    </p>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+  <div class="container">
+    <h4>Comments:</h4>
+      <%= render 'comments/comment_form' %>
+  </div>
+  
 <%= link_to 'Back', posts_path %>
+</div>
+

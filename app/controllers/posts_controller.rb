@@ -14,6 +14,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.includes(:comments).find(params[:id])
+    @comment = Comment.new
+    @seo_keywords = @post.body
   end
 
   # GET /posts/new
@@ -73,6 +76,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:ranking, :topic, :comment, :images)
+      params.require(:post).permit(:ranking, :topic, :body, :comment, :images)
     end
 end
