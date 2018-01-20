@@ -57,9 +57,13 @@ gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'devise', '~> 4.4'
 gem 'pg'
+
+gem 'redis', '~> 4.0', '>= 4.0.1'
+
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'bourbon', '~> 4.3', '>= 4.3.4'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0'
+
 
