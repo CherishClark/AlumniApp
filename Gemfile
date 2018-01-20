@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.4'
 gem 'pg'
+gem 'redis', '~> 4.0', '>= 4.0.1'
