@@ -7,3 +7,5 @@ User.create!(email: "test@test.com", password: "asdfasdf", password_confirmation
 end
 
 puts "made 100,000,000 posts y'all"
+
+
