@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   # GET /posts
   # GET /posts.json
@@ -10,6 +10,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.includes(:comments).find(params[:id])
+    @comment = Comment.new
+    @seo_keywords = @post.body
   end
 
   # GET /posts/new
@@ -60,6 +63,16 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+def upvote
+ @post.upvote_by current_user
+ redirect_to @post
+end
+
+def downvote
+ @post.downvote_by current_user
+ redirect_to @post
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
