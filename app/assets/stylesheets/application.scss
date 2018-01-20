@@ -1,7 +1,6 @@
 @import "bootstrap";
-
-
-@import "bootstrap";
+@import "font-awesome";
+@import "bourbon";
 
 body {
   padding-top: 3rem;
@@ -90,3 +89,21 @@ body {
     margin-top: 7rem;
   }
 }
+
+/* NAVBAR
+-------------------------------------------------- */
+
+  .nav-item {
+    padding: 3px;
+  }
+
+  .navbar-brand {
+    padding-right: 5px;
+  }
+
+  /* POSTS
+-------------------------------------------------- */
+  
+  .container {
+    padding-top: 50px;
+  }

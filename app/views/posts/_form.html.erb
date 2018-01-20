@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :ranking %>
-    <%= form.number_field :ranking, id: :post_ranking %>
+  <div class="form-group">
+    <%= form.number_field :ranking, id: :post_ranking, class: 'form-control', placeholder: 'Post Ranking' %>
   </div>
 
-  <div class="field">
-    <%= form.label :topic %>
-    <%= form.text_field :topic, id: :post_topic %>
+  <div class="form-group">
+    <%= form.text_field :topic, id: :post_topic, class: 'form-control', placeholder: 'Post Topic' %>
   </div>
 
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment, id: :post_comment %>
+  <div class="form-group">
+    <%= form.text_area :body, id: :post_body, class: 'form-control', rows: 7, placeholder: 'Your Post
+```language
+    Your Code Here
+``` 
+(Feel free to use markdown for code snippets  Default language set to Ruby)' %>
   </div>
 
-  <div class="field">
-    <%= form.label :images %>
-    <%= form.text_area :images, id: :post_images %>
+  <div class="form-group">
+    <%= form.text_area :images, id: :post_images, class: 'form-control', placeholder: 'image upload' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: 'btn btn-primary' %>
   </div>
 <% end %>
