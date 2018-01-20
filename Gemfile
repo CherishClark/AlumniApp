@@ -65,5 +65,5 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'bourbon', '~> 4.3', '>= 4.3.4'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0'
-
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
