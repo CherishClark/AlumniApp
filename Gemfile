@@ -54,3 +54,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'devise', '~> 4.4'
+gem 'pg'
