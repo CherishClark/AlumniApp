@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180120183741) do
+=======
+ActiveRecord::Schema.define(version: 20180120180454) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+>>>>>>> 930e33af0fe0a6d7845c2a56a6da9ff3d0c3c77a
 
   create_table "posts", force: :cascade do |t|
     t.integer "ranking"
@@ -19,7 +26,10 @@ ActiveRecord::Schema.define(version: 20180120183741) do
     t.text "images"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.text "body"
+=======
+>>>>>>> 930e33af0fe0a6d7845c2a56a6da9ff3d0c3c77a
   end
 
 end
