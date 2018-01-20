@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
     create_table :posts do |t|
       t.integer :ranking
       t.string :topic
+      t.text :body
       t.text :comment
       t.text :images
 

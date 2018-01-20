@@ -3,11 +3,13 @@
 one:
   ranking: 1
   topic: MyString
+  body: MyText
   comment: MyText
   images: MyText
 
 two:
   ranking: 1
   topic: MyString
+  body: MyText
   comment: MyText
   images: MyText
