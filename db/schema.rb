@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20180120202437) do
+
+
+
+
+  create_table "votes", force: :cascade do |t|
+    t.string "votable_type"
+    t.integer "votable_id"
+    t.string "voter_type"
+    t.integer "voter_id"
+    t.boolean "vote_flag"
+    t.string "vote_scope"
+    t.integer "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
+ActiveRecord::Schema.define(version: 20180120201018) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -25,14 +45,16 @@ ActiveRecord::Schema.define(version: 20180120202437) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+
+
   create_table "posts", force: :cascade do |t|
     t.integer "ranking"
     t.string "topic"
+    t.text "body"
     t.text "comment"
     t.text "images"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "body"
   end
 
   create_table "users", force: :cascade do |t|

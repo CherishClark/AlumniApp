@@ -11,8 +11,13 @@
 </p>
 
 <p>
+  <strong>Body:</strong>
+  <%= markdown @post.body %>
+</p>
+
+<p>
   <strong>Comment:</strong>
-  <%= @post.comment %>
+  <%= markdown @post.comment %>
 </p>
 
 <p>
