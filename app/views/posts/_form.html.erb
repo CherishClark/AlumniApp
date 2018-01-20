@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :ranking %>
-    <%= form.number_field :ranking, id: :post_ranking %>
+  <div class="form-group">
+    <%= form.number_field :ranking, id: :post_ranking, class: 'form-control', placeholder: 'Post Ranking' %>
   </div>
 
-  <div class="field">
-    <%= form.label :topic %>
-    <%= form.text_field :topic, id: :post_topic %>
+  <div class="form-group">
+    <%= form.text_field :topic, id: :post_topic, class: 'form-control', placeholder: 'Post Topic' %>
   </div>
 
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment, id: :post_comment %>
+  <div class="form-group">
+    <%= form.text_area :comment, id: :post_comment, class: 'form-control', rows: 15, placeholder: '```
+    Your Code Here
+``` 
+(Include three back ticks before and after your code as shown here to save it with the correct syntax.  Back ticks are on the button between tab and esc on a regular keyboard)' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :images %>
     <%= form.text_area :images, id: :post_images %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: 'btn btn-secondary' %>
   </div>
 <% end %>
