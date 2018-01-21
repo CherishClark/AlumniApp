@@ -16,6 +16,7 @@
     <tbody>
       <% @posts.each do |post| %>
         <tr>
+          <td><%= post.title %></td>
           <td><%= post.ranking %></td>
 
     <tbody>
@@ -24,7 +25,8 @@
           <td>  
           <%=link_to like_post_path(post), method: :put, class: 'btn btn-default btn-sm' do %>   <span class="glyphicon glyphicon-chevron-up"></span>
            like <%=post.get_upvotes.size%>
-            <% end %>
+           <% end %>
+      <% end %>
         </td>
         <td> 
           <%=link_to dislike_post_path(post), method: :put, class: 'btn btn-default btn-sm' do %>
