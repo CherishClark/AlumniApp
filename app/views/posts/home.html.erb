@@ -29,9 +29,9 @@
             <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <h1><%= @featured_posts.first.title %></h1>
+                <p><%= @featured_posts.first.body %></p>
+                <p><%= link_to 'View', @featured_posts.first, class: 'btn btn-primary btn-large' %></p>
               </div>
             </div>
           </div>
@@ -39,9 +39,9 @@
             <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                <h1><%= @featured_posts.second.title %></h1>
+                <p><%= @featured_posts.second.body %></p>
+                <p><%= link_to 'View', @featured_posts.second, class: 'btn btn-primary btn-large' %></p>
               </div>
             </div>
           </div>
@@ -49,9 +49,9 @@
             <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <h1><%= @featured_posts.third.title %></h1>
+                <p><%= @featured_posts.third.body %></p>
+                <p><%= link_to 'View', @featured_posts.third, class: 'btn btn-primary btn-large' %></p>
               </div>
             </div>
           </div>
