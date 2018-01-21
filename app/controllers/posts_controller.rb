@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def home
    @posts = Post.page(params[:page]).per(5)
+   @featured_posts = get_featured_posts
   end
 
   def index
@@ -87,5 +88,9 @@ end
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:ranking, :topic, :body, :title, :images)
+    end
+
+    def get_featured_posts
+      Post.all.to_a.sort_by {|post| post.get_upvotes.size}.last(3)
     end
 end
