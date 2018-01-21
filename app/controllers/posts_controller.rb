@@ -3,6 +3,10 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
+  def home
+   @posts = Post.page(params[:page]).per(5)
+  end
+
   def index
     @posts = Post.all
   end
