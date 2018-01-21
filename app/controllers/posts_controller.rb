@@ -69,13 +69,13 @@ class PostsController < ApplicationController
   end
 
 def upvote
- @post.upvote_by current_user
- redirect_to @post
+ @post.upvote_from current_user
+ redirect_to posts_path
 end
 
 def downvote
- @post.downvote_by current_user
- redirect_to @post
+ @post.downvote_from current_user
+ redirect_to posts_path
 end
 
   private
