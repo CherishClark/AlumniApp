@@ -7,6 +7,6 @@ class PostsChannel < ApplicationCable::Channel
   end
 
   def send_comment(data)
-    current_user.comments.create!(content: data['comment'], post_id: data['post_id'])
+    current_user.comments.create(content: data['comment'], post_id: data['post_id'])
   end
 end

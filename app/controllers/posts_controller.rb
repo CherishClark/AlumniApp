@@ -87,7 +87,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:ranking, :topic, :body, :title, :comment, :images)
+      params.require(:post).permit(:ranking, :topic, :body, :title, :images)
     end
 
     def get_featured_posts
