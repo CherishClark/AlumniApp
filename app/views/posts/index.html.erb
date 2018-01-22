@@ -21,14 +21,13 @@
       <% @posts.each do |post| %>
         <tr>
           <td>  
-          <%=link_to like_post_path(post), method: :put, class: 'btn btn-default btn-sm' do %>   <span class="glyphicon glyphicon-chevron-up"></span>
-           like <%=post.get_upvotes.size%>
+          <%=link_to like_post_path(post), method: :put, class: 'btn btn-default btn-sm' do %> <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+           <%=post.get_upvotes.size%>
             <% end %>
         </td>
         <td> 
           <%=link_to dislike_post_path(post), method: :put, class: 'btn btn-default btn-sm' do %>
-           <span class="glyphicon glyphicon-chevron-down"></span>
-           dislike <%=post.get_downvotes.size%></td>
+           <i class="fa fa-thumbs-down" aria-hidden="true"></i> <%=post.get_downvotes.size%></td>
           <%end%>
         </td>
           <td><%= post.topic %></td>
