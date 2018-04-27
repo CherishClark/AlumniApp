@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def home
    @posts = Post.page(params[:page]).per(5)
+   @featured_posts = get_featured_posts
   end
 
   def index
@@ -18,6 +19,13 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @seo_keywords = @post.body
   end
+
+  # def show
+  #   @post = Post.find(params[:id])
+  #   @comments = @post.comments
+  #   @new_comment = @post.comments.new
+  #   @seo_keywords = @post.body
+  # end
 
   # GET /posts/new
   def new
@@ -69,13 +77,13 @@ class PostsController < ApplicationController
   end
 
 def upvote
- @post.upvote_by current_user
- redirect_to @post
+ @post.upvote_from current_user
+ redirect_to posts_path
 end
 
 def downvote
- @post.downvote_by current_user
- redirect_to @post
+ @post.downvote_from current_user
+ redirect_to posts_path
 end
 
   private
@@ -86,6 +94,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:ranking, :topic, :body, :comment, :images)
+      params.require(:post).permit(:ranking, :topic, :body, :title, :images)
+    end
+
+    def get_featured_posts
+      Post.all.to_a.sort_by {|post| post.get_upvotes.size}.last(3)
     end
 end

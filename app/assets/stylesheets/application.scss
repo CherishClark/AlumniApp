@@ -107,3 +107,26 @@ body {
   .container {
     padding-top: 50px;
   }
+
+// homepage custom styles
+
+#homepage-carousel-container {
+  display:flex
+}
+// alumni homepage feature
+#alumni-feature{
+  margin: 40px 10px 40px 10px;
+
+}
+
+#feature-image {
+  width: 200px;
+  height:auto;
+}
+
+#feature-text {
+  width: 200px;
+  padding: 5px;
+  text-alignt:center;}
+
+// end of alumni homepage feature
